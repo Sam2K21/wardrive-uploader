@@ -1,4 +1,5 @@
-# wardrive-uploader
+# Wigle Wardrive Uploader ![icon](https://github.com/user-attachments/assets/7c1f720b-185c-4602-9b19-adf15737724f)
+
 This is a Python script to allow for easy upload of wardrive data through Wigle's API using a GUI.
 
 The script creates a file named "uploaded_files.txt" to track previously uploaded logs.
