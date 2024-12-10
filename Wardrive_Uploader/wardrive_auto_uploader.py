@@ -19,6 +19,9 @@ WIGLE_API_TOKEN = 'YOUR WIGLE API Token HERE'
 # SD card directory to monitor for new files (e.g., 'G:\\')
 WATCH_DIRECTORY = 'YOUR SD CARD DRIVE PATH HERE'
 
+# Supported extensions
+SUPPORTED_EXTENSIONS = ['.log', '.csv', '.kml', '.wiglecsv']
+
 # File to keep track of uploaded files
 UPLOADED_FILES_TRACKER = os.path.join(SCRIPT_DIR, 'uploaded_files.txt')
 
@@ -33,7 +36,11 @@ def save_uploaded_file(filename):
         f.write(f'{filename}\n')
 
 def list_new_files(directory, uploaded_files):
-    return [f for f in os.listdir(directory) if f.endswith('.log') and f not in uploaded_files]
+    # Include files that match the supported extensions and haven't been uploaded
+    return [
+        f for f in os.listdir(directory)
+        if any(f.endswith(ext) for ext in SUPPORTED_EXTENSIONS) and f not in uploaded_files
+    ]
 
 def upload_file(file_path):
     with open(file_path, 'rb') as f:
