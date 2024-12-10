@@ -13,11 +13,11 @@ logging.basicConfig(filename=os.path.join(SCRIPT_DIR, 'upload_log.txt'), level=l
 
 # Wigle API credentials
 WIGLE_API_URL = 'https://api.wigle.net/api/v2/file/upload'
-WIGLE_API_USER = ''
-WIGLE_API_TOKEN = ''
+WIGLE_API_USER = 'YOUR WIGLE API Name HERE'
+WIGLE_API_TOKEN = 'YOUR WIGLE API Token HERE'
 
-# Directory to monitor for new files (e.g., your SD card mount point)
-WATCH_DIRECTORY = 'G:\\'
+# SD card directory to monitor for new files (e.g., 'G:\\')
+WATCH_DIRECTORY = 'YOUR SD CARD DRIVE PATH HERE'
 
 # File to keep track of uploaded files
 UPLOADED_FILES_TRACKER = os.path.join(SCRIPT_DIR, 'uploaded_files.txt')
