@@ -2,7 +2,7 @@
 
 This is a Python script to allow for easy upload of wardrive data through Wigle's API using a GUI.
 
-The script creates a file named "uploaded_files.txt" to track previously uploaded logs.
+The script creates a file named "uploaded_files.txt" to track previously uploaded logs and "upload_log.txt" to log more detailed information about your uploads.
 
 How to use:
 
